@@ -3,9 +3,11 @@ import Photo from "./Photo";
 import PropTypes from 'prop-types'
 
 function PhotoWall(props) {
-    return <div className="photo-grid">
-            {props.posts.map((post, index) => <Photo key={index} post={post} alt={post.description} onRemovePhoto={props.onRemovePhoto}/>)}
-        </div>
+    return <div><button class="addIcon"> + </button>    
+                <div className="photo-grid">
+                    {props.posts.map((post, index) => <Photo key={index} post={post} alt={post.description} onRemovePhoto={props.onRemovePhoto}/>)}
+                </div>
+            </div>
 }
 
 PhotoWall.propTypes = {
